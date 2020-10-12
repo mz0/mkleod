@@ -1,5 +1,0 @@
-#cloud-config
-password: Password1
-chpasswd: { expire: False }
-ssh_pwauth: True
-hostname: deb10

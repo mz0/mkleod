@@ -1,0 +1,17 @@
+deb10 login: debian
+Password: Password1
+Linux deb10 4.19.0-11-amd64 #1 SMP Debian 4.19.146-1 (2020-09-17) x86_64
+
+debian@deb10:~$ df -h / /boot/efi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        19G  778M   17G   5% /
+/dev/vda15      124M  262K  124M   1% /boot/efi
+------------------------------------------------------
+
+#256K img VFAT - 238K usable space
+#truncate --size 256K seed.img
+#mkfs.vfat -n CIDATA seed.img
+#mcopy -oi seed.img user-data meta-data ::
+#qemu-img create -f qcow2 vol20.qcow2 18G
+#sudo virt-filesystems -a debian-10-nocloud-amd64-daily-20201009-418.qcow2 --extra
+#sudo virt-resize --expand /dev/sda1 debian-10-nocloud-amd64-daily-20201009-418.qcow2 vol20.qcow2

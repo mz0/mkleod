@@ -1,0 +1,5 @@
+#!/bin/sh
+virsh destroy dbn10
+virsh undefine dbn10
+rm -f seed.iso
+rm -f vol20.qcow2

@@ -1,0 +1,12 @@
+#cloud-config
+password: $6$lj21Wezy$gEY3f3iKCfBvrRIQDeYl4j1JHmYm/FGDIooe8WSCUGjpVCuCEtwIKVUHv8FOWNmQR8ufyIoLOmn/iRrhqIy800
+hostname: deb10
+users:
+  - default
+  - name: mz0
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPpiIKXMXvxzYNRAJFNkVMJeeIN5pzvbJI9pf1dNNl9p mz0@nb13
+    passwd: "$6$lj21Wezy$gEY3f3iKCfBvrRIQDeYl4j1JHmYm/FGDIooe8WSCUGjpVCuCEtwIKVUHv8FOWNmQR8ufyIoLOmn/iRrhqIy800"
+    lock_passwd: false
+    shell: /bin/bash
